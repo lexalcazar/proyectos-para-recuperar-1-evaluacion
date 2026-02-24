@@ -1,0 +1,12 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<h2>Inicio</h2>
+<p>Bienvenido a Rock Out, tu tienda de instrumentos musicales en línea. Explora nuestro catálogo y encuentra el instrumento perfecto para ti.</p>
+<a href="{% url 'listado_instrumentos' %}">Ver catálogo de instrumentos</a>
+<a href="{% url 'nuevo_instrumento' %}" class="btn btn-primary">Nuevo Instrumento</a>
+<a href="{% url 'nuevo_categoria' %}" class="btn btn-primary">Nueva Categoría</a>
+<a href="{% url 'nuevo_marca' %}" class="btn btn-primary">Nueva Marca</a>
+{% endblock %}

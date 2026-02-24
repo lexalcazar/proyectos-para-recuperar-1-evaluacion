@@ -1,0 +1,25 @@
+<!-- Template base_generic.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}My Site{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <header>
+      <h1>Rock Out</h1>
+    </header>
+    <main>
+        {% block content %}
+        <h2>Rock Out</h2>
+        <p>Tienda de instrumentos</p>
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; Alexander Alcázar 2026 Rock Out</p>
+    </footer>
+</body>
+</html>

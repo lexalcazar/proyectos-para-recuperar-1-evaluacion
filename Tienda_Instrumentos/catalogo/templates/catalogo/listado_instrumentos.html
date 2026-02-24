@@ -1,0 +1,23 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+{% block title %}Listado de Instrumentos{% endblock %}
+
+{% block content %}
+<h2>Listado de Instrumentos</h2>
+
+<ul>
+    {% for instrumento in instrumentos %}
+    <li>
+        <h3>{{ instrumento.nombre }}</h3>
+        <p>{{ instrumento.descripcion }}</p>
+        <p>Precio: {{ instrumento.precio }} €</p>
+        <p>Stock: {{ instrumento.stock }}</p>
+        <p>Categoría: {{ instrumento.categoria.nombre }}</p>
+        <p>Marca: {{ instrumento.marca.nombre }}</p>
+    </li>
+    
+    {% empty %}
+    <li>No hay instrumentos disponibles.</li>
+    {% endfor %}
+</ul>
+{% endblock %}  
